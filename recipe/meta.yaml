@@ -1,15 +1,15 @@
-{% set version = "1.9" %}
+{% set version = "2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-fds
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/fds_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fds/fds_{{ version }}.tar.gz
-  sha256: 1d86f83aa105abd3073e5cdac84da935e12183def93df6c5ed7b871d51df3b0e
+  sha256: adea1d4e1833009d40ea1ab06457ecb7ddf4dda3d99a11b12b28611b4f5f7d18
 
 build:
   number: 0
